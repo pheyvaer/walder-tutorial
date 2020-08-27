@@ -3,8 +3,8 @@ info:
   title: 'Ratings website'
   version: 1.0.0
 x-walder-datasources:
+  - https://pieterheyvaert.com/data/example/walder/ratings.ttl
   - https://data.betweenourworlds.org/latest
-  - http://localhost:8080/ratings.ttl
 paths:
   /ratings:
     get:
