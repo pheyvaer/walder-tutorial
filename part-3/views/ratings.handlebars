@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<h1>Ratings</h1>
+<div>
+    <ul>
+        {{#each data}}
+            <li>{{this.title}}: {{this.review.rating.value}}/5 </li>
+        {{/each}}
+    </ul>
+</div>
+</body>
+</html>

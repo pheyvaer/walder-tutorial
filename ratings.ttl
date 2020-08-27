@@ -1,0 +1,47 @@
+@prefix schema: <http://schema.org/> .
+@prefix anime: <https://betweenourworlds.org/anime/> .
+
+anime:naruto schema:review [
+                           a schema:Review;
+                           schema:reviewRating [
+                                   schema:bestRating: 5;
+                                   schema:worstRating 1;
+                                   schema:ratingValue 4
+                                   ]
+                           ].
+
+anime:one-piece schema:review [
+                               a schema:Review;
+                               schema:reviewRating [
+                                                       schema:bestRating: 5;
+                                                       schema:worstRating 1;
+                                                       schema:ratingValue 3
+                                                   ]
+                           ].
+
+anime:golden-time schema:review [
+                                  a schema:Review;
+                                  schema:reviewRating [
+                                                          schema:bestRating: 5;
+                                                          schema:worstRating 1;
+                                                          schema:ratingValue 5
+                                                      ]
+                              ].
+
+anime:bakuman schema:review [
+                                    a schema:Review;
+                                    schema:reviewRating [
+                                                            schema:bestRating: 5;
+                                                            schema:worstRating 1;
+                                                            schema:ratingValue 2
+                                                        ]
+                                ].
+
+anime:beyblade-burst schema:review [
+                                    a schema:Review;
+                                    schema:reviewRating [
+                                                            schema:bestRating: 5;
+                                                            schema:worstRating 1;
+                                                            schema:ratingValue 1
+                                                        ]
+                                ].

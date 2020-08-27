@@ -1,0 +1,37 @@
+openapi: 3.0.2
+info:
+  title: 'Ratings website'
+  version: 1.0.0
+x-walder-datasources:
+  - https://data.betweenourworlds.org/latest
+  - http://localhost:8080/ratings.ttl
+paths:
+  /ratings:
+    get:
+      summary: Returns a list of all tv shows and their ratings.
+      responses:
+        200:
+          description: List of all tv shows and their ratings.
+          x-walder-input-text/html: ratings.handlebars
+      x-walder-query:
+        graphql-query: >
+          {
+            id @single
+            title @single
+            review @single {
+              rating @single {
+                value @single
+              }
+            }
+          }
+        json-ld-context: >
+          {
+            "schema": "http://schema.org/",
+            "review": "schema:review",
+            "rating": "schema:reviewRating",
+            "value": "schema:ratingValue",
+            "title": "schema:name"
+          }
+      x-walder-postprocessing:
+        keepSingleENTitle:
+          source: utils.js
